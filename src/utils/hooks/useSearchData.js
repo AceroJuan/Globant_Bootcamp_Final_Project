@@ -14,7 +14,7 @@ const useSearchData = () => {
     const url = `https://api.themoviedb.org/3/search/movie?api_key=34041f61c196b07d1af8c759950a0672&language=en-US&page=1&include_adult=false&query=${word}`;
     const resp = await fetch(url);
     const { results } = await resp.json();
-    console.log(results);
+
     const data = results.map((movie) => {
       return {
         id: movie.id,
@@ -34,7 +34,7 @@ const useSearchData = () => {
     const url = `https://api.themoviedb.org/3/search/tv?api_key=34041f61c196b07d1af8c759950a0672&language=en-US&page=1&include_adult=false&query=${word}`;
     const resp = await fetch(url);
     const { results } = await resp.json();
-    console.log(results);
+
     const data = results.map((movie) => {
       return {
         id: movie.id,

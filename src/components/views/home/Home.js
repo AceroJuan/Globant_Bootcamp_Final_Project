@@ -6,8 +6,9 @@ const Home = () => {
   return (
     <>
       <main className="main main__background">
-        <h1 className="header__h1">
-          find info about movies, TV shows, and more.
+        <h1 className="main__h1">
+          find info about movies, tv shows, <br />
+          and more!
         </h1>
       </main>
     </>

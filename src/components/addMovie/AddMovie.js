@@ -21,7 +21,7 @@ const AddMovie = () => {
   };
 
   return (
-    <form className="main__form" onSubmit={handleSubmit}>
+    <form className="nav__form" onSubmit={handleSubmit}>
       <label className="form__label">find a movie: </label>
       <input
         className="form__input"

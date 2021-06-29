@@ -13,7 +13,6 @@ const usePreviewData = (id) => {
     const url = `https://api.themoviedb.org/3/movie/${id}?api_key=34041f61c196b07d1af8c759950a0672&language=en-US`;
     const resp = await fetch(url);
     const data = await resp.json();
-    console.log(data);
     const preview = {
       id: data.id,
       backdrop_path: data.backdrop_path,

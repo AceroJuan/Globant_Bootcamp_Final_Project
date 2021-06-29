@@ -12,17 +12,8 @@ body {
   width: 100%;
 }
 
-.header {
-}
-
-.header__h1 {
-  font-size: 3em;
-  text-align: center;
-}
-
-.nav__ul {
+.nav {
   align-items: center;
-
   background-color: #cc2a2a;
   color: #ffffff;
   display: flex;
@@ -31,22 +22,42 @@ body {
   justify-content: space-around;
   padding: 10px;
 }
+.nav__ul {
+  align-items: center;
+  display: flex;
+}
 
 .nav__li {
-  color: #ffffff;
   list-style-type: none;
   padding: 0 10px;
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.nav__a:link,
+:visited {
+  color: #fff;
+  text-decoration: none;
 }
 
-.main__form {
-  padding: 10px;
-  width: 45%;
+.nav__a:hover {
+  color: #272727;
+  font-size: 22px;
+}
+
+.nav__form {
+  width: 30%;
+}
+.main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  padding: 16%;
+}
+
+.main__h1 {
+  font-size: 3em;
+  text-align: center;
+  text-shadow: 3px 4px #000000;
 }
 
 .main__background {
@@ -58,16 +69,6 @@ body {
   height: 100%;
 }
 
-.form__label {
-  font-size: 18px;
-}
-
-.form__input {
-  font-size: 18px;
-  padding: 8px;
-  width: 90%;
-}
-
 .main__ul {
   display: flex;
 }
@@ -75,6 +76,12 @@ body {
 .main__li {
   list-style-type: none;
   padding: 10px;
+}
+
+.main__a:link,
+:visited {
+  color: #fff;
+  text-decoration: none;
 }
 
 .main__card {
@@ -98,6 +105,16 @@ body {
   max-height: 300px;
 }
 
+.form__label {
+  font-size: 18px;
+}
+
+.form__input {
+  font-size: 18px;
+  padding: 8px;
+  width: 90%;
+}
+
 .card__grid {
   display: flex;
   flex-wrap: wrap;
@@ -111,6 +128,7 @@ body {
 .preview__article {
   padding: 5%;
 }
+
 .preview__h2 {
   font-size: 2.5rem;
   margin-bottom: 6px;
@@ -124,4 +142,51 @@ body {
 .preview__p {
   line-height: 1.6;
   padding: 10px 2px;
+}
+
+.search {
+  padding: 3%;
+}
+
+.search__a:link,
+:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.search__a:hover {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.search__article {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 4%;
+}
+
+.search__h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.search__img {
+  border-radius: 4px;
+  max-height: 160px;
+}
+
+.search__item {
+  display: flex;
+  padding: 1.4% 4%;
+}
+
+.search__p {
+  font-size: 15px;
+  line-height: 1.6;
+  padding: 10px 2px;
+}
+
+.transition {
+  transition: all 0.3s;
 }

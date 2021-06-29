@@ -23,16 +23,15 @@ const App = () => {
       <ProvideSearch>
         <Router>
           <Header />
-          <section>
-            <SearchResults />
-          </section>
-          <footer></footer>
           <Switch>
             <Route path="/trending">
               <Trending />
             </Route>
             <Route path="/movies">
               <Movies />
+            </Route>
+            <Route path="/search">
+              <SearchResults />
             </Route>
             <Route path="/preview/:id">
               <Preview />

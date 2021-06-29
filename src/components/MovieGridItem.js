@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const MovieGridItem = ({ id, title, poster_img }) => {
   return (
     <>
-      <div className="main__card">
+      <article className="main__card">
         <img
           className="main__img"
           src={poster_img}
@@ -13,9 +13,11 @@ const MovieGridItem = ({ id, title, poster_img }) => {
           title={title}
         />
         <p className="main__p">
-          <Link to={`/preview/${id}`}>{title} </Link>
+          <Link className="main__a" to={`/preview/${id}`}>
+            {title}
+          </Link>
         </p>
-      </div>
+      </article>
     </>
   );
 };

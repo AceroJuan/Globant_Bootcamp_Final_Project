@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 // import PropTypes from "prop-types";
 import useSearchData from "../../utils/hooks/useSearchData";
 import { useSearch } from "../../utils/context/useSearchContext";
+import SearchResultItem from "../views/searchResultItem/SearchResultItem";
 
 const SearchResults = () => {
   const { state } = useSearch();
@@ -12,10 +13,10 @@ const SearchResults = () => {
 
   return (
     <>
-      <ul>
-        {dataList.map((item) => {
-          return <li key={item.id}>{item.title || ""}</li>;
-        })}
+      <ul className="search">
+        {dataList.map((item) => (
+          <SearchResultItem item={item} />
+        ))}
       </ul>
     </>
   );
