@@ -8,14 +8,20 @@ const Movies = () => {
   const dataMovie = useDataMovie();
 
   return (
-    <>
-      <h2>movies</h2>
-      <ul className="card__grid">
-        {dataMovie.map((movie) => (
-          <MovieGridItem key={movie.id} {...movie} />
-        ))}
-      </ul>
-    </>
+    <section>
+      <header>
+        <h2 className="capitalize center animate__animated animate__fadeIn">
+          trending movies
+        </h2>
+      </header>
+      <main>
+        <ul className="card__grid animate__animated animate__fadeIn animate__delay-1s">
+          {dataMovie.map((movie) => (
+            <MovieGridItem key={movie.id} {...movie} />
+          ))}
+        </ul>
+      </main>
+    </section>
   );
 };
 

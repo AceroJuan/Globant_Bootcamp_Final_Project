@@ -8,22 +8,20 @@ const Preview = () => {
   const { poster_img, title, release_date, overview } = usePreviewData(id);
 
   return (
-    <>
-      <section className="preview">
-        <img
-          className=""
-          src={poster_img}
-          alt={`poster of ${title}`}
-          title={title}
-        />
-        <article className="preview__article">
-          <h2 className="preview__h2">{`${title}`}</h2>
-          <p className="preview__p">{`release date: ${release_date}`}</p>
-          <h3 className="preview__h3">overview</h3>
-          <p className="preview__p">{`${overview}`}</p>
-        </article>
-      </section>
-    </>
+    <section className="preview animate__animated animate__fadeIn animate__delay-1s">
+      <img
+        className=""
+        src={poster_img}
+        alt={`poster of ${title}`}
+        title={title}
+      />
+      <article className="preview__article">
+        <h2>{`${title}`}</h2>
+        <p className="preview__p">{`release date: ${release_date}`}</p>
+        <h3 className="preview__h3">overview</h3>
+        <p className="preview__p">{`${overview}`}</p>
+      </article>
+    </section>
   );
 };
 

@@ -12,13 +12,13 @@ const SearchResults = () => {
   }, [state]);
 
   return (
-    <>
+    <section>
       <ul className="search">
         {dataList.map((item) => (
           <SearchResultItem item={item} />
         ))}
       </ul>
-    </>
+    </section>
   );
 };
 

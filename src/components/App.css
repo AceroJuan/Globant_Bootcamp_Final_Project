@@ -4,6 +4,11 @@
   padding: 0;
 }
 
+h2 {
+  font-size: 2.5em;
+  padding: 2% 0;
+}
+
 body {
   background: #000;
   color: #fff;
@@ -12,40 +17,29 @@ body {
   width: 100%;
 }
 
-.nav {
-  align-items: center;
-  background-color: #cc2a2a;
-  color: #ffffff;
+.capitalize {
+  text-transform: capitalize;
+}
+.center {
+  text-align: center;
+}
+
+.card__grid {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.form__label {
   font-size: 18px;
-  font-weight: 700;
-  justify-content: space-around;
-  padding: 10px;
-}
-.nav__ul {
-  align-items: center;
-  display: flex;
 }
 
-.nav__li {
-  list-style-type: none;
-  padding: 0 10px;
+.form__input {
+  font-size: 16px;
+  padding: 6px;
+  width: 70%;
 }
 
-.nav__a:link,
-:visited {
-  color: #fff;
-  text-decoration: none;
-}
-
-.nav__a:hover {
-  color: #272727;
-  font-size: 22px;
-}
-
-.nav__form {
-  width: 30%;
-}
 .main {
   align-items: center;
   display: flex;
@@ -78,6 +72,12 @@ body {
   padding: 10px;
 }
 
+.main__a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .main__a:link,
 :visited {
   color: #fff;
@@ -90,7 +90,12 @@ body {
   flex-direction: column;
   margin: 0 10px 10px 0;
   overflow: hidden;
+  opacity: 0.7;
   padding: 3px;
+}
+
+.main__card:hover {
+  opacity: 1;
 }
 
 .main__p {
@@ -105,19 +110,40 @@ body {
   max-height: 300px;
 }
 
-.form__label {
-  font-size: 18px;
-}
-
-.form__input {
-  font-size: 18px;
-  padding: 8px;
-  width: 90%;
-}
-
-.card__grid {
+.nav {
+  align-items: center;
+  background-color: #cc2a2a;
+  color: #ffffff;
   display: flex;
-  flex-wrap: wrap;
+  font-size: 18px;
+  font-weight: 700;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.nav__ul {
+  align-items: center;
+  display: flex;
+}
+
+.nav__li {
+  list-style-type: none;
+  padding: 0 10px;
+}
+
+.nav__a:link,
+:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav__a:hover {
+  color: #272727;
+  font-size: 22px;
+}
+
+.nav__form {
+  width: 30%;
 }
 
 .preview {
@@ -127,11 +153,6 @@ body {
 
 .preview__article {
   padding: 5%;
-}
-
-.preview__h2 {
-  font-size: 2.5rem;
-  margin-bottom: 6px;
 }
 
 .preview__h3 {
