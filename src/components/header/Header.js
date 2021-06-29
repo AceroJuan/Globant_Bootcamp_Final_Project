@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import AddMovie from "../addMovie/AddMovie";
 // import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const [setMovies] = useState(["Iron Man"]);
   return (
     <>
       <header className="header">
@@ -21,6 +23,7 @@ const Header = () => {
             <li className="nav__li">
               <Link to="/trending">trending</Link>
             </li>
+            <AddMovie setMovies={setMovies} />
           </ul>
         </nav>
       </header>

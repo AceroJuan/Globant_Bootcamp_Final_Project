@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 /***
  * fetch
  * resp
@@ -14,9 +14,27 @@ const usePreviewData = (id) => {
     const resp = await fetch(url);
     const data = await resp.json();
     console.log(data);
+    const preview = {
+      id: data.id,
+      backdrop_path: data.backdrop_path,
+      backdrop_img: `https://image.tmdb.org/t/p/original${data.backdrop_path}`,
+      overview: data.overview,
+      release_date: data.release_date,
+      poster: data.poster_path,
+      poster_img: `https://image.tmdb.org/t/p/w300${data.poster_path}`,
+      title: data.title,
+      runtime: data.runtime,
+      vote_average: data.vote_average,
+    };
+
+    setPreview(preview);
   };
 
-  return getPreviewData();
+  useEffect(() => {
+    getPreviewData();
+  }, []);
+
+  return preview;
 };
 
 export default usePreviewData;

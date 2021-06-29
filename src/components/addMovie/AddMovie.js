@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
-import { useSearch } from "../utils/context/useSearchContext";
+// import PropTypes from "prop-types";
+import { useSearch } from "../../utils/context/useSearchContext";
 
-const AddMovie = ({ setMovies }) => {
+const AddMovie = () => {
   const { setNewValue } = useSearch();
 
   const [inputValue, setInputValue] = useState("");
@@ -33,8 +33,6 @@ const AddMovie = ({ setMovies }) => {
   );
 };
 
-AddMovie.propTypes = {
-  setMovies: PropTypes.func.isRequired,
-};
+// AddMovie.propTypes = {};
 
 export default AddMovie;

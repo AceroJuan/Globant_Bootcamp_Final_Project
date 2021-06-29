@@ -9,14 +9,14 @@ const TvShows = () => {
     <>
       <h2>teve shows</h2>
       <ul className="card__grid">
-        {dataTvSeries.map((movie) => (
-          <MovieGridItem key={movie.id} {...movie} />
+        {dataTvSeries.map((tvShow) => (
+          <MovieGridItem key={tvShow.id} {...tvShow} />
         ))}
       </ul>
     </>
   );
 };
 
-TvShows.propTypes = {};
+// TvShows.propTypes = {};
 
 export default TvShows;

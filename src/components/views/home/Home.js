@@ -1,19 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 // import PropTypes from "prop-types";
-import AddMovie from "../../AddMovie";
+// import AddMovie from "../../AddMovie";
 
 const Home = () => {
-  const [setMovies] = useState(["Iron Man"]);
   return (
     <>
-      <h2>Home</h2>
-      <main className="main">
-        <AddMovie setMovies={setMovies} />
-        <ul className="main__ul">
-          {/* {movies.map((movie) => (
-            <MovieGrid key={movie} movie={movie} />
-          ))} */}
-        </ul>
+      <main className="main main__background">
+        <h1 className="header__h1">
+          find info about movies, TV shows, and more.
+        </h1>
       </main>
     </>
   );
