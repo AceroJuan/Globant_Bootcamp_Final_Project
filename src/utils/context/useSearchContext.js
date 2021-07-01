@@ -13,27 +13,17 @@ export const useSearch = () => {
 
 // manejo de logica del estado
 const useProvideSearch = () => {
-  const [state, setState] = useState("");
-  const setNewValue = (text) => {
-    if (typeof text === "string") {
-      setState(text);
-      return;
-    }
-
-    return;
-  };
+  const [state, setState] = useState([]);
   return {
     state,
-    setNewValue,
+    setState,
   };
 };
 
 export const ProvideSearch = ({ children }) => {
   const context = useProvideSearch();
+  console.log("context", context);
   return (
-    <searchContext.Provider value={context}>
-      {" "}
-      {children}{" "}
-    </searchContext.Provider>
+    <searchContext.Provider value={context}>{children}</searchContext.Provider>
   );
 };

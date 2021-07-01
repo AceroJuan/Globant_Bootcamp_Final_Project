@@ -1,24 +1,27 @@
-import React, { useEffect } from "react";
-// import PropTypes from "prop-types";
-import useSearchData from "../../utils/hooks/useSearchData";
+import React from "react";
+import { useParams } from "react-router-dom";
 import { useSearch } from "../../utils/context/useSearchContext";
 import SearchResultItem from "../views/searchResultItem/SearchResultItem";
+import { v4 as uuidv4 } from "uuid";
+// import PropTypes from "prop-types";
 
 const SearchResults = () => {
-  const { state } = useSearch();
-  const [dataList, setWord] = useSearchData();
-  useEffect(() => {
-    setWord(state);
-  }, [state]);
+  let { id, path } = useParams();
+  const { state } = useSearch(id, path);
 
   return (
-    <section>
+    <main>
       <ul className="search">
-        {dataList.map((item) => (
-          <SearchResultItem item={item} />
+        {state.map((item) => (
+          <SearchResultItem key={uuidv4()} item={item} path={"movie"} />
         ))}
       </ul>
-    </section>
+      {/* <ul className="search">
+        {state.map((item) => (
+          <SearchResultItem item={item} path={"movie"} />
+        ))}
+      </ul> */}
+    </main>
   );
 };
 

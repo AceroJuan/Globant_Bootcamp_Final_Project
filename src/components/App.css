@@ -5,8 +5,7 @@
 }
 
 h2 {
-  font-size: 2.5em;
-  padding: 2% 0;
+  font-size: 2em;
 }
 
 body {
@@ -32,12 +31,24 @@ body {
 
 .form__label {
   font-size: 18px;
+  padding-right: 8px;
 }
 
 .form__input {
-  font-size: 16px;
+  font-size: 15px;
   padding: 6px;
   width: 70%;
+}
+.header {
+  background-color: #cc2a2a;
+  display: flex;
+  justify-content: space-around;
+  padding: 6px;
+}
+
+.header__h2__a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .main {
@@ -45,7 +56,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 2%;
-  padding: 16%;
+  padding: 17%;
 }
 
 .main__h1 {
@@ -55,7 +66,7 @@ body {
 }
 
 .main__background {
-  background-image: url("https://www.gracenote.com/wp-content/uploads/2015/07/Movie-TV-Art-Mosaic-Comp1.jpg");
+  background-image: url("https://movie-app-reactjs.s3.us-east-2.amazonaws.com/backimg.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -88,9 +99,9 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin: 0 10px 10px 0;
+  margin: 0 5px 10px 5px;
   overflow: hidden;
-  opacity: 0.7;
+  opacity: 0.8;
   padding: 3px;
 }
 
@@ -118,7 +129,6 @@ body {
   font-size: 18px;
   font-weight: 700;
   justify-content: space-around;
-  padding: 10px;
 }
 
 .nav__ul {
@@ -131,18 +141,19 @@ body {
   padding: 0 10px;
 }
 
-.nav__a:link,
+.nav__li__a:link,
 :visited {
   color: #fff;
   text-decoration: none;
 }
 
-.nav__a:hover {
+.nav__li__a:hover {
   color: #272727;
   font-size: 22px;
 }
 
 .nav__form {
+  align-self: center;
   width: 30%;
 }
 
@@ -210,4 +221,8 @@ body {
 
 .transition {
   transition: all 0.3s;
+}
+
+.px {
+  padding: 15px 0;
 }

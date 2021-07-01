@@ -1,40 +1,19 @@
 import React from "react";
-import AddMovie from "../addMovie/AddMovie";
-// import PropTypes from "prop-types";
+import Search from "../search/Search";
+import Navbar from "../navbar/Navbar";
 import { Link } from "react-router-dom";
+// import PropTypes from "prop-types";
 
 const Header = () => {
   return (
     <header className="header">
-      <nav className="nav">
-        <Link to="/">
-          <h1>hola movies</h1>
+      <h2>
+        <Link className="header__h2__a" to="/">
+          hola movies
         </Link>
-        <ul className="nav__ul">
-          <li className="nav__li"></li>
-          <li className="nav__li">
-            <Link className="nav__a transition" to="/movies">
-              movies
-            </Link>
-          </li>
-          <li className="nav__li">
-            <Link className="nav__a transition" to="/tv">
-              tv shows
-            </Link>
-          </li>
-          <li className="nav__li">
-            <Link className="nav__a transition" to="/trending">
-              trending
-            </Link>
-          </li>
-          <li className="nav__li">
-            <Link className="nav__a transition" to="/search">
-              search
-            </Link>
-          </li>
-        </ul>
-        <AddMovie />
-      </nav>
+      </h2>
+      <Navbar />
+      <Search />
     </header>
   );
 };

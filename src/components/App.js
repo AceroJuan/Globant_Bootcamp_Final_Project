@@ -8,7 +8,6 @@ import { ProvideSearch } from "../utils/context/useSearchContext";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./views/home/Home";
 import Movies from "./views/movies/Movies";
-import Trending from "./views/trending/Trending";
 import Header from "./header/Header";
 import TvShows from "./views/tvShows/TvShows";
 import Preview from "./views/preview/Preview";
@@ -24,16 +23,13 @@ const App = () => {
         <Router>
           <Header />
           <Switch>
-            <Route path="/trending">
-              <Trending />
-            </Route>
             <Route path="/movies">
               <Movies />
             </Route>
             <Route path="/search">
               <SearchResults />
             </Route>
-            <Route path="/preview/:id">
+            <Route path="/:path/preview/:id">
               <Preview />
             </Route>
             <Route path="/tv">

@@ -1,25 +1,21 @@
 import React from "react";
 // import PropTypes from "prop-types";
-import useDataTvSeries from "../../../utils/hooks/useDataTvSeries";
-import MovieGridItem from "../../MovieGridItem";
+import useDataTvShows from "../../../utils/hooks/useDataTvShows";
+import DataGridItem from "../../DataGridItem";
 
 const TvShows = () => {
-  const dataTvSeries = useDataTvSeries();
+  const dataTvSeries = useDataTvShows();
   return (
-    <section>
-      <header>
-        <h2 className="capitalize center animate__animated animate__fadeIn">
-          popular tv shows
-        </h2>
-      </header>
-      <main>
-        <ul className="card__grid animate__animated animate__fadeIn animate__delay-1s ">
-          {dataTvSeries.map((tvShow) => (
-            <MovieGridItem key={tvShow.id} {...tvShow} />
-          ))}
-        </ul>
-      </main>
-    </section>
+    <main>
+      <h2 className="capitalize center px animate__animated animate__fadeIn">
+        popular tv shows
+      </h2>
+      <div className="card__grid animate__animated animate__fadeIn animate__delay-1s ">
+        {dataTvSeries.map((tvShow) => (
+          <DataGridItem key={tvShow.id} path={"tv"} {...tvShow} />
+        ))}
+      </div>
+    </main>
   );
 };
 

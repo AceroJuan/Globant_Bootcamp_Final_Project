@@ -2,10 +2,10 @@ import React from "react";
 // import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-const MovieGridItem = ({ id, title, poster_img }) => {
+const DataGridItem = ({ id, title, poster_img, path }) => {
   return (
-    <article className="main__card transition">
-      <Link className="main__a" to={`/preview/${id}`}>
+    <div className="main__card transition">
+      <Link className="main__a" to={`${path}/preview/${id}`}>
         <img
           className="main__img"
           src={poster_img}
@@ -14,10 +14,10 @@ const MovieGridItem = ({ id, title, poster_img }) => {
         />
         <p className="main__p">{title}</p>
       </Link>
-    </article>
+    </div>
   );
 };
 
-MovieGridItem.propTypes = {};
+DataGridItem.propTypes = {};
 
-export default MovieGridItem;
+export default DataGridItem;

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 // import PropTypes from 'prop-types'
 
-const SearchResultItem = ({ item }) => {
+const SearchResultItem = ({ item, path }) => {
   return (
     <li className="search__item animate__animated animate__fadeIn animate__delay-1s">
       <img
@@ -13,11 +13,16 @@ const SearchResultItem = ({ item }) => {
       />
       <article className="search__article">
         <h3 className="search_h3 ">
-          <Link className="search__a transition" to={`/preview/${item.id}`}>
-            {item.title || ""}{" "}
+          <Link
+            className="search__a transition"
+            to={`${path}/preview/${item.id}`}
+          >
+            {item.title || item.name}
           </Link>
         </h3>
-        <p className="search__p">{`${item.release_date}`}</p>
+        <p className="search__p">{`${
+          item.release_date || item.first_air_date
+        }`}</p>
         <p className="search__p">{`${item.overview}`}</p>
       </article>
     </li>
