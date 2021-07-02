@@ -1,0 +1,30 @@
+.nav {
+  align-items: center;
+  background-color: #cc2a2a;
+  color: #ffffff;
+  display: flex;
+  font-size: 18px;
+  font-weight: 700;
+  justify-content: space-around;
+}
+
+.nav__ul {
+  align-items: center;
+  display: flex;
+}
+
+.nav__ul__li {
+  list-style-type: none;
+  padding: 0 10px;
+}
+
+.nav__ul__li__a:link,
+:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav__ul__li__a:hover {
+  color: #272727;
+  font-size: 22px;
+}

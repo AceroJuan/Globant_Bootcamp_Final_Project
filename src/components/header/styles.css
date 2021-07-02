@@ -1,0 +1,11 @@
+.header {
+  background-color: #cc2a2a;
+  display: flex;
+  justify-content: space-around;
+  padding: 6px;
+}
+
+.header__h2__a {
+  color: #fff;
+  text-decoration: none;
+}

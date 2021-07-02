@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
+import "./styles.css";
 // import PropTypes from "prop-types";
 
 const menuItems = ["people", "movies", "tv_shows"];
@@ -11,8 +12,8 @@ const Navbar = () => {
       <nav className="nav">
         <ul className="nav__ul">
           {menuItems.map((item) => (
-            <li className="nav__li" key={uuidv4()}>
-              <Link className="nav__li__a transition" to={`/${item}`}>
+            <li className="nav__ul__li" key={uuidv4()}>
+              <Link className="nav__ul__li__a transition" to={`/${item}`}>
                 {item}
               </Link>
             </li>

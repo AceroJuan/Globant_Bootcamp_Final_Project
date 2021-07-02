@@ -2,15 +2,14 @@ import { useEffect, useState } from "react";
 import getPeopleData from "../helpers/getPeopleData";
 // import PropTypes from "prop-types";
 
-const usePeopleData = () => {
-  const [peopleList, setPeopleList] = useState();
+const usePeopleData = (id, path) => {
+  const [peopleList, setPeopleList] = useState([]);
 
   useEffect(() => {
-    getPeopleData().then((people) => {
+    getPeopleData(id, path).then((people) => {
       setPeopleList(people);
     });
-  }, []);
-
+  }, [id, path]);
   return peopleList;
 };
 

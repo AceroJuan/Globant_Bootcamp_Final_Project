@@ -2,7 +2,8 @@ const getPeopleData = async () => {
   const url = `https://api.themoviedb.org/3/person/popular?api_key=34041f61c196b07d1af8c759950a0672&language=en-US&page=1`;
   const resp = await fetch(url);
   const { results } = await resp.json();
-  const data = results.map((people) => {
+
+  const data = await results.map((people) => {
     return {
       id: people.id,
       known_for: people.known_for,
