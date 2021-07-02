@@ -4,11 +4,10 @@
  * se debe interpolar la variable a la url espeficicada en la documentacion de la API para formar el link de la imagen
  */
 
-const getDataMovie = async () => {
+const getMovieData = async () => {
   const url = `https://api.themoviedb.org/3/trending/movie/day?api_key=34041f61c196b07d1af8c759950a0672`;
   const resp = await fetch(url);
   const { results } = await resp.json();
-
   const data = results.map((movie) => {
     return {
       id: movie.id,
@@ -24,4 +23,4 @@ const getDataMovie = async () => {
   return data;
 };
 
-export default getDataMovie;
+export default getMovieData;

@@ -13,7 +13,11 @@ export const useSearch = () => {
 
 // manejo de logica del estado
 const useProvideSearch = () => {
-  const [state, setState] = useState([]);
+  const [state, setState] = useState({
+    movies: [],
+    tv: [],
+    people: [],
+  });
   return {
     state,
     setState,
@@ -22,7 +26,6 @@ const useProvideSearch = () => {
 
 export const ProvideSearch = ({ children }) => {
   const context = useProvideSearch();
-  console.log("context", context);
   return (
     <searchContext.Provider value={context}>{children}</searchContext.Provider>
   );

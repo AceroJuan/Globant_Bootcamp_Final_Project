@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 // import PropTypes from "prop-types";
 
-const menuItems = ["movies", "tv"];
+const menuItems = ["people", "movies", "tv_shows"];
 
 const Navbar = () => {
   return (

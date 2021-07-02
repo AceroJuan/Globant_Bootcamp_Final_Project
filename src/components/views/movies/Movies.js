@@ -1,12 +1,10 @@
 import React from "react";
 // import PropTypes from "prop-types";
-
-import useDataMovie from "../../../utils/hooks/useDataMovie";
-
+import useMovieData from "../../../utils/hooks/useMovieData";
 import DataGridItem from "../../DataGridItem";
 
 const Movies = () => {
-  const dataMovie = useDataMovie();
+  const dataMovie = useMovieData();
 
   return (
     <main>
@@ -22,6 +20,6 @@ const Movies = () => {
   );
 };
 
-Movies.propTypes = {};
+// Movies.propTypes = {};
 
 export default Movies;

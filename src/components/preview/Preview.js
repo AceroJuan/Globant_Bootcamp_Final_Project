@@ -1,7 +1,7 @@
 import React from "react";
 // import PropTypes from "prop-types";
 import { useParams } from "react-router-dom";
-import usePreviewData from "../../../utils/hooks/usePreviewData";
+import usePreviewData from "../../utils/hooks/usePreviewData";
 
 const Preview = () => {
   let { id, path } = useParams();

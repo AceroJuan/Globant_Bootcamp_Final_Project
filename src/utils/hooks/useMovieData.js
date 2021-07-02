@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import getDataMovie from "../helpers/getDataMovie";
+import getMovieData from "../helpers/getMovieData";
 
-const useDataMovie = () => {
+const useMovieData = () => {
   const [movieList, setMovieList] = useState([]); // data movie list
 
   useEffect(() => {
-    getDataMovie().then((movie) => {
+    getMovieData().then((movie) => {
       setMovieList(movie);
     });
   }, []);
@@ -13,4 +13,4 @@ const useDataMovie = () => {
   return movieList; // { data: [], loading: true }
 };
 
-export default useDataMovie;
+export default useMovieData;

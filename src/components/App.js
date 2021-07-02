@@ -10,13 +10,11 @@ import Home from "./views/home/Home";
 import Movies from "./views/movies/Movies";
 import Header from "./header/Header";
 import TvShows from "./views/tvShows/TvShows";
-import Preview from "./views/preview/Preview";
+import People from "./views/people/People";
+import Preview from "./preview/Preview";
+import Person from "./person/Person";
 
 const App = () => {
-  // const handleFindMovie = () => {
-  //   setMovies((movie) => ["cruella", ...movie]);
-  // };
-
   return (
     <>
       <ProvideSearch>
@@ -29,10 +27,16 @@ const App = () => {
             <Route path="/search">
               <SearchResults />
             </Route>
+            <Route path="/people">
+              <People />
+            </Route>
+            <Route path="/person/:id">
+              <Person />
+            </Route>
             <Route path="/:path/preview/:id">
               <Preview />
             </Route>
-            <Route path="/tv">
+            <Route path="/tv_shows">
               <TvShows />
             </Route>
             <Route path="/">

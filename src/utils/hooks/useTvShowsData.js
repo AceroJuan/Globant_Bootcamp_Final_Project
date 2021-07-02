@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import getDataTvShows from "../helpers/getDataTvShows";
+import getTvShowsData from "../helpers/getTvShowsData";
 
-const useDataTvShows = () => {
+const useTvShowsData = () => {
   const [tvShow, setTvShow] = useState([]); // data movie tv Shows
 
   useEffect(() => {
-    getDataTvShows().then((tvShow) => {
+    getTvShowsData().then((tvShow) => {
       setTvShow(tvShow);
     });
   }, []);
@@ -13,4 +13,4 @@ const useDataTvShows = () => {
   return tvShow;
 };
 
-export default useDataTvShows;
+export default useTvShowsData;

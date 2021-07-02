@@ -1,10 +1,10 @@
 import React from "react";
 // import PropTypes from "prop-types";
-import useDataTvShows from "../../../utils/hooks/useDataTvShows";
+import useTvShowsData from "../../../utils/hooks/useTvShowsData";
 import DataGridItem from "../../DataGridItem";
 
 const TvShows = () => {
-  const dataTvSeries = useDataTvShows();
+  const dataTvSeries = useTvShowsData();
   return (
     <main>
       <h2 className="capitalize center px animate__animated animate__fadeIn">

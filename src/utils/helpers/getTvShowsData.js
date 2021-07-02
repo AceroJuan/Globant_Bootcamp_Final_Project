@@ -4,7 +4,7 @@
  * se debe interpolar la variable a la url espeficicada en la documentacion de la API para formar el link de la imagen
  */
 
-const getDataTvShows = async () => {
+const getTvShowsData = async () => {
   const url = `https://api.themoviedb.org/3/tv/popular?api_key=34041f61c196b07d1af8c759950a0672&language=en-US&page=1`;
   const resp = await fetch(url);
   const { results } = await resp.json();
@@ -23,4 +23,4 @@ const getDataTvShows = async () => {
   return data;
 };
 
-export default getDataTvShows;
+export default getTvShowsData;
