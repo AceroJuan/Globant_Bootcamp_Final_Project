@@ -1,0 +1,15 @@
+.form {
+  align-self: center;
+  width: 30%;
+}
+
+.form__label {
+  font-size: 18px;
+  padding-right: 8px;
+}
+
+.form__input {
+  font-size: 15px;
+  padding: 6px;
+  width: 70%;
+}

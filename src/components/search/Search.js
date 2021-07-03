@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import { useSearch } from "../../utils/context/useSearchContext";
 // import PropTypes from "prop-types";
 import useSearchData from "../../utils/hooks/useSearchData";
+import "./styles.css";
 
 const Search = () => {
   let history = useHistory();
@@ -28,7 +29,7 @@ const Search = () => {
   };
 
   return (
-    <form className="nav__form" onSubmit={handleSubmit}>
+    <form className="form" onSubmit={handleSubmit}>
       <label className="form__label" for="search_field">
         search
       </label>
