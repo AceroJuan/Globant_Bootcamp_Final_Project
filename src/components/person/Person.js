@@ -2,6 +2,10 @@ import React from "react";
 import usePeopleData from "../../utils/hooks/usePeopleData";
 // import PropTypes from "prop-types";
 
+// use params (id)
+// helper y hook para llamar a una sola persona dependiendo del id
+// https://api.themoviedb.org/3/person/{person_id}?api_key=<<api_key>>&language=en-US
+
 const Person = () => {
   const peopleData = usePeopleData();
 

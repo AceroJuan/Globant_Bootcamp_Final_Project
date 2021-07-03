@@ -5,7 +5,7 @@ import "./styles.css";
 
 const DataGridItem = ({ id, title, poster_img, path }) => {
   return (
-    <div className="div__card transition">
+    <div className="div transition">
       <Link className="div__a" to={`${path}/preview/${id}`}>
         <img
           className="div__a__img"
@@ -13,7 +13,7 @@ const DataGridItem = ({ id, title, poster_img, path }) => {
           alt={`poster of ${title}`}
           title={title}
         />
-        <p className="div__p__img">{title}</p>
+        <p className="div__a__p">{title}</p>
       </Link>
     </div>
   );
