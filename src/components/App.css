@@ -23,26 +23,6 @@ body {
   text-align: center;
 }
 
-.main__ul {
-  display: flex;
-}
-
-.main__li {
-  list-style-type: none;
-  padding: 10px;
-}
-
-.search__a:link,
-:visited {
-  color: #fff;
-  text-decoration: none;
-}
-
-.search__a:hover {
-  color: #ffffff;
-  font-size: 20px;
-}
-
 .transition {
   transition: all 0.3s;
 }

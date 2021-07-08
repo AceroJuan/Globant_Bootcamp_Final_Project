@@ -3,16 +3,16 @@ import React from "react";
 import "./App.css";
 import "animate.css";
 
-import SearchResults from "./searchResults/SearchResults";
+import SearchResults from "./SearchResults/SearchResults";
 import { ProvideSearch } from "../utils/context/useSearchContext";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./views/home/Home";
-import Movies from "./views/movies/Movies";
-import Header from "./header/Header";
-import TvShows from "./views/tvShows/TvShows";
-import People from "./views/people/People";
-import Preview from "./preview/Preview";
-import Person from "./person/Person";
+import Home from "./views/Home/Home";
+import Movies from "./views/Movies/Movies";
+import Header from "./Header/Header";
+import TvShows from "./views/TvShows/TvShows";
+import People from "./views/People/People";
+import Preview from "./Preview/Preview";
+import Person from "./Person/Person";
 
 const App = () => {
   return (
@@ -24,7 +24,7 @@ const App = () => {
             <Route path="/movies">
               <Movies />
             </Route>
-            <Route path="/search">
+            <Route path="/search/:filter">
               <SearchResults />
             </Route>
             <Route path="/people">

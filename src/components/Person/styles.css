@@ -1,0 +1,22 @@
+.preview {
+  display: flex;
+  padding: 4%;
+}
+
+.preview__p {
+  padding: 10px 0;
+}
+
+.preview__article__p {
+  padding: 5%;
+}
+
+.preview__article__h3 {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+
+.preview__article__p {
+  line-height: 1.6;
+  padding: 10px 2px;
+}

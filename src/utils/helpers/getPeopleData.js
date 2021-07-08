@@ -19,3 +19,7 @@ const getPeopleData = async () => {
 };
 
 export default getPeopleData;
+
+// const url = `https://api.themoviedb.org/3/person/{person_id}?api_key=34041f61c196b07d1af8c759950a0672&language=en-US`
+// get person data
+// use person data
