@@ -1,3 +1,6 @@
 .main__section__ul {
-  padding: 3%;
+  padding: 40px;
+}
+.search__main {
+  display: flex;
 }

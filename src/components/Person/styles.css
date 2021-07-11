@@ -1,22 +1,38 @@
-.preview {
+.person__card__h1 {
+  font-size: 40px;
+  padding-bottom: 18px;
+}
+
+.person__picture__img {
+  max-height: 600px;
+}
+
+.person {
   display: flex;
-  padding: 4%;
+  padding: 40px;
 }
 
-.preview__p {
-  padding: 10px 0;
+.person__card {
+  padding: 0 40px 40px 40px;
 }
 
-.preview__article__p {
-  padding: 5%;
+.person__card__bio__h2 {
+  font-size: 22px;
+  padding-bottom: 10px;
 }
 
-.preview__article__h3 {
-  font-size: 1.6rem;
-  margin-bottom: 6px;
+.person__card__bio__p {
+  line-height: 22px;
 }
 
-.preview__article__p {
-  line-height: 1.6;
-  padding: 10px 2px;
+.person__card__info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.person__card__info__p {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  line-height: 25px;
 }

@@ -1,17 +1,17 @@
 import { render, screen } from "@testing-library/react";
 import { Router } from "react-router-dom";
 import { createMemoryHistory } from "history";
-import People from "../components/views/People/People";
+import Movies from "../../components/views/Movies/Movies";
 
 describe("test <Navbar /> component", () => {
   test("render links", () => {
     const history = createMemoryHistory();
     render(
       <Router history={history}>
-        <People />
+        <Movies />
       </Router>
     );
 
-    expect(screen.getByTestId("people")).toHaveTextContent("people"); // check the input's value is empty
+    expect(screen.getByTestId("movies")).toHaveTextContent("trending movies"); // check the input's value is empty
   });
 });

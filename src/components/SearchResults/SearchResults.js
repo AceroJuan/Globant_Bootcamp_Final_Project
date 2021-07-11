@@ -12,7 +12,7 @@ const SearchResults = () => {
   const { state } = useSearch();
 
   return (
-    <main>
+    <main className="search__main">
       <FilterMenu />
       <section data-testid="searchResults">
         {filter === "movies" ? (

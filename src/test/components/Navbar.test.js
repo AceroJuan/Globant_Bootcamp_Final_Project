@@ -1,17 +1,18 @@
 import { render, screen } from "@testing-library/react";
 import { Router } from "react-router-dom";
+import Navbar from "../../components/Navbar/Navbar";
 import { createMemoryHistory } from "history";
-import TvShows from "../components/views/TvShows/TvShows";
 
 describe("test <Navbar /> component", () => {
   test("render links", () => {
     const history = createMemoryHistory();
     render(
       <Router history={history}>
-        <TvShows />
+        <Navbar />
       </Router>
     );
 
-    expect(screen.getByTestId("tvshows")).toHaveTextContent("popular tv shows"); // check the input's value is empty
+    const peopleAnchorNode = screen.getByText(/people/i);
+    expect(peopleAnchorNode).toBeInTheDocument();
   });
 });

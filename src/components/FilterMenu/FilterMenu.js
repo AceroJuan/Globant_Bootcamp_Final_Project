@@ -1,19 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { v4 as uuidv4 } from "uuid";
 import { Link } from "react-router-dom";
+import "./styles.css";
+
+const menuItems = ["movies", "tv", "people"];
 
 const FilterMenu = () => {
   return (
-    <ul>
-      <li data-testid="filter">
-        <Link to="/search/movies">movies</Link>
-      </li>
-      <li>
-        <Link to="/search/tv">tv shows</Link>
-      </li>
-      <li>
-        <Link to="/search/people">people</Link>
-      </li>
+    <ul className="sidebar">
+      <p className="sidebar__p" data-testid="filterMenu">
+        search results
+      </p>
+      {menuItems.map((item) => (
+        <li className="sidebar__p__li" key={uuidv4()}>
+          <Link className="sidebar__P__li__a transition" to={`/search/${item}`}>
+            {item}
+          </Link>
+        </li>
+      ))}
     </ul>
   );
 };

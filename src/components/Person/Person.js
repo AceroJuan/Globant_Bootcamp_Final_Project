@@ -22,26 +22,39 @@ const Person = () => {
 
   return (
     <>
-      <section className="preview animate__animated animate__fadeIn animate__delay-1s">
-        <img
-          className=""
-          src={profile_img}
-          alt={`poster of ${name}`}
-          title={name}
-        />
-        <article className="preview__article">
-          <h2 data-testid="person">{name}</h2>
-          <p className="preview__p">
-            {`birthday: ${birthday}`} {`place of birth: ${place_of_birth}`}
-          </p>
+      <div className="person animate__animated animate__fadeIn animate__delay-1s">
+        <picture className="person__picture">
+          <img
+            className="person__picture__img"
+            src={profile_img}
+            alt={`poster of ${name}`}
+            title={name}
+          />
+        </picture>
 
-          <p className="preview__p">{`biography: ${biography}`}</p>
-          <h3 className="preview__h3">known_for_department</h3>
-          <p className="preview__p">{known_for_department}</p>
-          <h3 className="preview__h3">popularity</h3>
-          <p className="preview__p">{popularity}</p>
-        </article>
-      </section>
+        <div className="person__card">
+          <h1 className="person__card__h1" data-testid="person">
+            {name}
+          </h1>
+          <div className="person__card__bio">
+            <h2 className="person__card__bio__h2 capitalize">biography</h2>
+            <p className="person__card__bio__p capitalize">{biography}</p>
+          </div>
+          <div className="person__card__info">
+            <p className="person__card__info__p capitalize">
+              <b>birthday</b>
+              {birthday}
+            </p>
+            <p className="person__card__info__p capitalize">
+              <b>place of birth</b>
+              {place_of_birth}
+            </p>
+            <p className="person__card__info__p capitalize">
+              <b>known for</b> {known_for_department}
+            </p>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

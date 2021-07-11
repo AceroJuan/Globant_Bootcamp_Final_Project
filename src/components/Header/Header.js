@@ -9,7 +9,7 @@ const Header = () => {
     <header className="header" data-testid="header">
       <h2 className="header__h2">
         <Link className="header__h2__a" to="/">
-          hola movies
+          hola movies!
         </Link>
       </h2>
       <Navbar />

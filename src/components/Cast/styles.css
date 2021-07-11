@@ -1,0 +1,29 @@
+.cast__card {
+  max-width: 130px;
+}
+
+.cast__card__a {
+  display: flex;
+  flex-direction: column;
+}
+
+.cast__card__a:link,
+:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.cast__card__img {
+  border-radius: 5px;
+  max-height: 200px;
+}
+.cast__card_person {
+  font-size: 18px;
+  text-align: left;
+  padding: 10px 0;
+}
+.cast__card_character {
+  color: #a5a5a5;
+  font-size: 15px;
+  text-align: left;
+}

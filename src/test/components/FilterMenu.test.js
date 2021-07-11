@@ -1,17 +1,19 @@
 import { render, screen } from "@testing-library/react";
 import { Router } from "react-router-dom";
 import { createMemoryHistory } from "history";
-import Movies from "../components/views/Movies/Movies";
+import FilterMenu from "../../components/FilterMenu/FilterMenu";
 
 describe("test <Navbar /> component", () => {
   test("render links", () => {
     const history = createMemoryHistory();
     render(
       <Router history={history}>
-        <Movies />
+        <FilterMenu />
       </Router>
     );
 
-    expect(screen.getByTestId("movies")).toHaveTextContent("trending movies"); // check the input's value is empty
+    expect(screen.getByTestId("filterMenu")).toHaveTextContent(
+      "search results"
+    ); // check the input's value is empty
   });
 });

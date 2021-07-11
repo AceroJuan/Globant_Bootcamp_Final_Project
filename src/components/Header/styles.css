@@ -5,6 +5,10 @@
   padding: 6px;
 }
 
+.header__h2 {
+  text-transform: capitalize;
+}
+
 .header__h2__a {
   color: #fff;
   text-decoration: none;

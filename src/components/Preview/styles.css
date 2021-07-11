@@ -1,12 +1,14 @@
 .preview {
   display: flex;
-  padding: 4%;
+  padding: 100px;
 }
+
+.preview__h1 {
+  font-size: 40px;
+}
+
 .preview__article {
   padding: 40px;
-}
-.preview__article__p {
-  padding: 5%;
 }
 
 .preview__article__h3 {
@@ -17,4 +19,43 @@
 .preview__article__p {
   line-height: 1.6;
   padding: 10px 2px;
+}
+
+.cast {
+  padding: 10px;
+}
+
+.cast__h2 {
+  padding: 0 0 15px 20px;
+}
+
+.custom__scroll {
+  display: flex;
+  overflow: auto;
+}
+
+.custom__scroll::-webkit-scrollbar {
+  width: 10px;
+  height: 7px;
+}
+
+/* Track */
+.custom__scroll::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #808080;
+  border-radius: 4px;
+}
+
+/* Handle */
+.custom__scroll::-webkit-scrollbar-thumb {
+  background: hsl(0, 66%, 48%, 0.5);
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+.custom__scroll::-webkit-scrollbar-thumb:hover {
+  background: #a02323;
+}
+
+.recommendations__grid {
+  display: flex;
 }

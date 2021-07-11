@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 import "./styles.css";
 // import PropTypes from "prop-types";
 
-const menuItems = ["people", "movies", "tv_shows"];
+const menuItems = ["movies", "tv_shows", "people"];
 
 const Navbar = () => {
   return (

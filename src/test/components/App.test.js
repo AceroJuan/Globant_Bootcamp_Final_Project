@@ -3,7 +3,7 @@ import { Router } from "react-router-dom";
 import { render, screen } from "@testing-library/react";
 import { createMemoryHistory } from "history";
 import "@testing-library/jest-dom/extend-expect";
-import App from "../components/App";
+import App from "../../components/App";
 
 describe("test for <App /> component", () => {
   test("full app rendering", () => {

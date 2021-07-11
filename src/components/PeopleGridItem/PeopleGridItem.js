@@ -5,10 +5,14 @@ import "./styles.css";
 
 const PeopleGridItem = ({ id, name = "name", profile_img, path }) => {
   return (
-    <div className="div transition">
-      <Link className="div__a" to={`/person/${id}`}>
-        <img className="div__a__img" src={profile_img} alt={profile_img} />
-        <p className="div__a__p" data-testid="peopleGridItem">
+    <div className="card transition">
+      <Link className="card__a" to={`/person/${id}`}>
+        <img
+          className="card__a__img"
+          src={profile_img}
+          alt={`person: ${name}`}
+        />
+        <p className="card__a__p" data-testid="peopleGridItem">
           {name}
         </p>
       </Link>

@@ -1,17 +1,17 @@
 import { render, screen } from "@testing-library/react";
 import { Router } from "react-router-dom";
 import { createMemoryHistory } from "history";
-import FilterMenu from "../components/FilterMenu/FilterMenu";
+import PeopleGridItem from "../../components/PeopleGridItem/PeopleGridItem";
 
 describe("test <Navbar /> component", () => {
   test("render links", () => {
     const history = createMemoryHistory();
     render(
       <Router history={history}>
-        <FilterMenu />
+        <PeopleGridItem />
       </Router>
     );
 
-    expect(screen.getByTestId("filter")).toHaveTextContent("movies"); // check the input's value is empty
+    expect(screen.getByTestId("peopleGridItem")).toHaveTextContent("name"); // check the input's value is empty
   });
 });

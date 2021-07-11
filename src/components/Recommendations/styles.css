@@ -1,0 +1,13 @@
+.recommendation__card {
+  padding: 10px;
+}
+
+.recommendation__card__img {
+  border-radius: 5px;
+  max-height: 200px;
+}
+
+.recommendation__card_person {
+  font-size: 18px;
+  padding: 10px 0;
+}

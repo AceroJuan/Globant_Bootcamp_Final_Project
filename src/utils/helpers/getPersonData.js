@@ -15,7 +15,6 @@ const getPersonData = async (id) => {
     profile_img: `https://image.tmdb.org/t/p/w300${person.profile_path}`,
   };
 
-  console.log(personData);
   return personData;
 };
 

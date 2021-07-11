@@ -1,41 +1,36 @@
-.div {
+.card {
   align-items: center;
   display: flex;
   flex-direction: column;
   margin: 0 5px 10px 5px;
-  max-width: 15%;
+  max-width: 200px;
   overflow: hidden;
   opacity: 0.8;
   padding: 3px;
 }
 
-.div:hover {
+.card:hover {
   opacity: 1;
 }
 
-.div__a {
+.card__a {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.div__a:link,
+.card__a:link,
 :visited {
   color: #fff;
   text-decoration: none;
 }
 
-.div__a__p {
-  padding: 20px;
-  text-align: center;
-}
-
-.div__a__img {
+.card__a__img {
   border-radius: 4px;
   max-height: 300px;
 }
 
-.div__p__img {
+.card__a__p {
   max-width: fit-content;
   padding: 14px 0;
   text-align: center;

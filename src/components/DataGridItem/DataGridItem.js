@@ -1,20 +1,20 @@
 import React from "react";
+import defaultImg from "../../assets/defaultImg.png";
 // import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import "./styles.css";
 
 const DataGridItem = ({ id, title = "title", poster_img, path }) => {
   return (
-    <div className="div transition">
-      <Link className="div__a" to={`${path}/preview/${id}`}>
+    <div className="card transition">
+      <Link className="card__a" to={`${path}/preview/${id}`}>
         <img
-          className="div__a__img"
-          src={poster_img}
+          className="card__a__img"
+          src={poster_img ? poster_img : defaultImg}
           alt={`poster of ${title}`}
           title={title}
         />
-
-        <p className="div__a__p" data-testid="dataGridItem">
+        <p className="card__a__p" data-testid="dataGridItem">
           {title}
         </p>
       </Link>

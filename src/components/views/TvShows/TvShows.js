@@ -9,13 +9,13 @@ const TvShows = () => {
   const dataTvSeries = useTvShowsData();
   return (
     <main>
-      <h2
+      <h1
         className="capitalize center px animate__animated animate__fadeIn"
         data-testid="tvshows"
       >
         popular tv shows
-      </h2>
-      <div className="main__div animate__animated animate__fadeIn animate__delay-1s ">
+      </h1>
+      <div className="card__container animate__animated animate__fadeIn animate__delay-1s ">
         {dataTvSeries.map((tvShow) => (
           <DataGridItem key={tvShow.id} path={"tv"} {...tvShow} />
         ))}
