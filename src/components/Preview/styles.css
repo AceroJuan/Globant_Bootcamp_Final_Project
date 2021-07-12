@@ -3,16 +3,16 @@
   padding: 100px;
 }
 
-.preview__h1 {
-  font-size: 40px;
-}
-
 .preview__article {
   padding: 40px;
 }
 
-.preview__article__h3 {
-  font-size: 1.6rem;
+.preview__article__h1 {
+  font-size: 40px;
+}
+
+.preview__article__h2 {
+  font-size: 24px;
   margin-bottom: 6px;
 }
 
@@ -21,11 +21,11 @@
   padding: 10px 2px;
 }
 
-.cast {
-  padding: 10px;
+.containers {
+  padding: 20px;
 }
 
-.cast__h2 {
+.containers__h2 {
   padding: 0 0 15px 20px;
 }
 
@@ -54,8 +54,4 @@
 /* Handle on hover */
 .custom__scroll::-webkit-scrollbar-thumb:hover {
   background: #a02323;
-}
-
-.recommendations__grid {
-  display: flex;
 }

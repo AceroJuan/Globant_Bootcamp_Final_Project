@@ -1,4 +1,4 @@
-import defaultImg from "../../assets/defaultImg.png";
+import defaultImg2 from "../../assets/defaultImg2.jpg";
 
 const getPreviewData = async (id, path) => {
   const url = `https://api.themoviedb.org/3/${path}/${id}?api_key=34041f61c196b07d1af8c759950a0672&language=en-US`;
@@ -19,9 +19,8 @@ const getPreviewData = async (id, path) => {
     vote_average: data.vote_average,
     poster_img: data.poster_path
       ? `https://image.tmdb.org/t/p/w300/${data.poster_path}`
-      : defaultImg,
+      : defaultImg2,
   };
-
   return preview;
 };
 

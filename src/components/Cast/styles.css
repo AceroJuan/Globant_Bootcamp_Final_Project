@@ -1,3 +1,7 @@
+.cast {
+  padding: 0 10px;
+}
+
 .cast__card {
   max-width: 130px;
 }

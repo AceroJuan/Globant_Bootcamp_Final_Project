@@ -5,6 +5,16 @@
   width: 160px;
 }
 
+.sidebar__p {
+  background-color: #cc2a2a;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 130px;
+}
+
 .sidebar__p__li {
   list-style: none;
   padding: 5px 20px;
@@ -23,14 +33,4 @@
 .sidebar__P__li__a:hover {
   color: #ffffff;
   font-size: 20px;
-}
-
-.sidebar__p {
-  background-color: #cc2a2a;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  padding: 10px;
-  width: 130px;
 }

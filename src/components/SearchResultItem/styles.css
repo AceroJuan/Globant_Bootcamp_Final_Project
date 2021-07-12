@@ -1,12 +1,17 @@
+.li {
+  display: flex;
+  padding: 15px 2px;
+}
+
 .li__article {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 0 4%;
+  padding: 0 30px;
 }
 
-.li_h3 {
-  font-size: 1rem;
+.li__article__h2 {
+  font-size: 20px;
   margin-bottom: 6px;
 }
 
@@ -15,18 +20,13 @@
   max-height: 160px;
 }
 
-.li {
-  display: flex;
-  padding: 1.4% 4%;
-}
-
-.li__p {
+.li__article__p {
   font-size: 15px;
   line-height: 1.6;
   padding: 10px 2px;
 }
 
-.li__a:link,
+.li__article__h2__a:link,
 :visited {
   color: #fff;
   text-decoration: none;

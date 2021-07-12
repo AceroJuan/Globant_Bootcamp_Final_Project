@@ -1,21 +1,19 @@
 import React from "react";
-// import PropTypes from "prop-types";
 import useTvShowsData from "../../../utils/hooks/useTvShowsData";
 import DataGridItem from "../../DataGridItem/DataGridItem";
-
 import "./styles.css";
 
 const TvShows = () => {
   const dataTvSeries = useTvShowsData();
   return (
-    <main>
+    <main className="cards">
       <h1
-        className="capitalize center px animate__animated animate__fadeIn"
+        className="cards__h1 capitalize px animate__animated animate__fadeIn"
         data-testid="tvshows"
       >
         popular tv shows
       </h1>
-      <div className="card__container animate__animated animate__fadeIn animate__delay-1s ">
+      <div className="cards__grid animate__animated animate__fadeIn animate__delay-1s ">
         {dataTvSeries.map((tvShow) => (
           <DataGridItem key={tvShow.id} path={"tv"} {...tvShow} />
         ))}
@@ -23,7 +21,5 @@ const TvShows = () => {
     </main>
   );
 };
-
-// TvShows.propTypes = {};
 
 export default TvShows;

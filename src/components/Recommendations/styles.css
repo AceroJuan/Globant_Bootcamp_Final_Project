@@ -2,6 +2,17 @@
   padding: 10px;
 }
 
+.recommendation__card__a {
+  display: flex;
+  flex-direction: column;
+}
+
+.recommendation__card__a:link,
+:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
 .recommendation__card__img {
   border-radius: 5px;
   max-height: 200px;

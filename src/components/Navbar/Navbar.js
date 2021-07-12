@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import "./styles.css";
-// import PropTypes from "prop-types";
 
 const menuItems = ["movies", "tv_shows", "people"];
 
@@ -23,7 +22,5 @@ const Navbar = () => {
     </>
   );
 };
-
-Navbar.propTypes = {};
 
 export default Navbar;

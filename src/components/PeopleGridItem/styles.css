@@ -2,7 +2,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin: 0 5px 10px 5px;
+  margin: 0 10px 10px 10px;
   max-width: 200px;
   overflow: hidden;
   opacity: 0.8;
@@ -35,15 +35,4 @@
   padding: 14px 0;
   text-align: center;
   word-wrap: break-word;
-}
-
-.recommendation__card__a {
-  display: flex;
-  flex-direction: column;
-}
-
-.recommendation__card__a:link,
-:visited {
-  color: #fff;
-  text-decoration: none;
 }

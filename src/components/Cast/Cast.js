@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import "./styles.css";
 import { Link } from "react-router-dom";
 
-const Cast = ({ character, credits_profile_path, name = "name", id }) => {
+const Cast = ({ character, credits_profile_path, name, id }) => {
   return (
     <div className="cast">
       <div className="cast__card">
@@ -23,6 +23,15 @@ const Cast = ({ character, credits_profile_path, name = "name", id }) => {
   );
 };
 
-Cast.propTypes = {};
+Cast.defaultProps = {
+  name: "name",
+};
+
+Cast.propTypes = {
+  character: PropTypes.string.isRequired,
+  credits_profile_path: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+};
 
 export default Cast;

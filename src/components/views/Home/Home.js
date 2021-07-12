@@ -1,6 +1,4 @@
 import React from "react";
-// import PropTypes from "prop-types";
-// import AddMovie from "../../AddMovie";
 import "./styles.css";
 
 const Home = () => {
@@ -10,7 +8,5 @@ const Home = () => {
     </main>
   );
 };
-
-Home.propTypes = {};
 
 export default Home;

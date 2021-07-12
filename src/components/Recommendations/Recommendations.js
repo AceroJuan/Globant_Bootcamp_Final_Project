@@ -3,14 +3,7 @@ import PropTypes from "prop-types";
 import "./styles.css";
 import { Link } from "react-router-dom";
 
-const Recommendations = ({
-  recommendation_backdrop_path,
-  title,
-  name,
-  release_date,
-  id,
-  path,
-}) => {
+const Recommendations = ({ recommendation_backdrop_path, title, name, id }) => {
   return (
     <>
       <div className="recommendation">
@@ -19,7 +12,7 @@ const Recommendations = ({
             <img
               className="recommendation__card__img"
               src={recommendation_backdrop_path}
-              alt={`poster of ${name}`}
+              alt={`poster of ${title ? title : name}`}
             />
             <p
               className="recommendation__card_person"
@@ -34,6 +27,11 @@ const Recommendations = ({
   );
 };
 
-Recommendations.propTypes = {};
+Recommendations.propTypes = {
+  recommendation_backdrop_path: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  name: PropTypes.string,
+  id: PropTypes.number.isRequired,
+};
 
 export default Recommendations;

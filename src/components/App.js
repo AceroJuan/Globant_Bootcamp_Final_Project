@@ -1,8 +1,6 @@
 import React from "react";
-// import PropTypes from "prop-types";
 import "./App.css";
 import "animate.css";
-
 import SearchResults from "./SearchResults/SearchResults";
 import { ProvideSearch } from "../utils/context/useSearchContext";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -48,7 +46,5 @@ const App = () => {
     </>
   );
 };
-
-App.propTypes = {};
 
 export default App;

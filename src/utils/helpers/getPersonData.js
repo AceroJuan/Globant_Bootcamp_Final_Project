@@ -1,3 +1,4 @@
+import defaultImg from "../../assets/defaultImg.jpg";
 const getPersonData = async (id) => {
   const url = `https://api.themoviedb.org/3/person/${id}?api_key=34041f61c196b07d1af8c759950a0672&language=en-US`;
   const resp = await fetch(url);
@@ -12,7 +13,9 @@ const getPersonData = async (id) => {
     place_of_birth: person.place_of_birth,
     popularity: person.popularity,
     profile_path: person.profile_path,
-    profile_img: `https://image.tmdb.org/t/p/w300${person.profile_path}`,
+    profile_img: person.profile_path
+      ? `https://image.tmdb.org/t/p/w300${person.profile_path}`
+      : defaultImg,
   };
 
   return personData;

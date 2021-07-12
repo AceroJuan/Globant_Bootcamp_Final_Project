@@ -1,5 +1,4 @@
 import React from "react";
-// import PropTypes from "prop-types";
 import { useParams } from "react-router-dom";
 import useCreditsData from "../../utils/hooks/useCreditsData";
 import usePreviewData from "../../utils/hooks/usePreviewData";
@@ -21,23 +20,26 @@ const Preview = () => {
     <>
       <div className="preview animate__animated animate__fadeIn animate__delay-1s">
         <img
+          className="preview__img"
           src={poster_img}
           alt={`poster of ${title ? title : name}`}
           title={title ? title : name}
         />
         <div className="preview__article">
-          <h1 className="preview__h1" data-testid="preview">{`${
-            title ? title : name
-          }`}</h1>
-          <p className="preview__article__p capitalize">{`release date: ${
-            release_date ? release_date : first_air_date
-          }`}</p>
-          <h2 className="preview__article__h3 capitalize">overview</h2>
+          <h1 className="preview__article__h1">{`${title ? title : name}`}</h1>
+          <p
+            className="preview__article__p capitalize"
+            data-testid="previewP"
+          >{`release date: ${release_date ? release_date : first_air_date}`}</p>
+          <h2 className="preview__article__h2 capitalize">overview</h2>
           <p className="preview__article__p">{`${overview}`}</p>
         </div>
       </div>
-      <div className="cast">
-        <h2 className="cast__h2 animate__animated animate__fadeIn animate__delay-1s capitalize">
+      <div className="containers">
+        <h2
+          className="containers__h2 animate__animated animate__fadeIn animate__delay-1s capitalize"
+          data-testid="previewH2"
+        >
           cast
         </h2>
         <div className="custom__scroll animate__animated animate__fadeIn animate__delay-1s">
@@ -47,8 +49,8 @@ const Preview = () => {
         </div>
       </div>
 
-      <div className="cast">
-        <h2 className="cast__h2 animate__animated animate__fadeIn animate__delay-1s capitalize">
+      <div className="containers">
+        <h2 className="containers__h2 animate__animated animate__fadeIn animate__delay-1s capitalize">
           recommendations
         </h2>
         <div className="custom__scroll animate__animated animate__fadeIn animate__delay-1s">
@@ -60,7 +62,5 @@ const Preview = () => {
     </>
   );
 };
-
-Preview.propTypes = {};
 
 export default Preview;

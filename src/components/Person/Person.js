@@ -16,46 +16,43 @@ const Person = () => {
     known_for_department,
     name = "name",
     place_of_birth,
-    popularity,
     profile_img,
   } = usePersonData(id);
 
   return (
-    <>
-      <div className="person animate__animated animate__fadeIn animate__delay-1s">
-        <picture className="person__picture">
-          <img
-            className="person__picture__img"
-            src={profile_img}
-            alt={`poster of ${name}`}
-            title={name}
-          />
-        </picture>
+    <main className="person animate__animated animate__fadeIn animate__delay-1s">
+      <picture className="person__picture">
+        <img
+          className="person__picture__img"
+          src={profile_img}
+          alt={`poster of ${name}`}
+          title={name}
+        />
+      </picture>
 
-        <div className="person__card">
-          <h1 className="person__card__h1" data-testid="person">
-            {name}
-          </h1>
-          <div className="person__card__bio">
-            <h2 className="person__card__bio__h2 capitalize">biography</h2>
-            <p className="person__card__bio__p capitalize">{biography}</p>
-          </div>
-          <div className="person__card__info">
-            <p className="person__card__info__p capitalize">
-              <b>birthday</b>
-              {birthday}
-            </p>
-            <p className="person__card__info__p capitalize">
-              <b>place of birth</b>
-              {place_of_birth}
-            </p>
-            <p className="person__card__info__p capitalize">
-              <b>known for</b> {known_for_department}
-            </p>
-          </div>
+      <div className="person__card">
+        <h1 className="person__card__h1" data-testid="person">
+          {name}
+        </h1>
+        <div className="person__card__bio">
+          <h2 className="person__card__bio__h2 capitalize">biography</h2>
+          <p className="person__card__bio__p capitalize">{biography}</p>
+        </div>
+        <div className="person__card__info">
+          <p className="person__card__info__p capitalize">
+            <b>birthday</b>
+            {birthday}
+          </p>
+          <p className="person__card__info__p capitalize">
+            <b>place of birth</b>
+            {place_of_birth}
+          </p>
+          <p className="person__card__info__p capitalize">
+            <b>known for</b> {known_for_department}
+          </p>
         </div>
       </div>
-    </>
+    </main>
   );
 };
 

@@ -1,12 +1,3 @@
-.person__card__h1 {
-  font-size: 40px;
-  padding-bottom: 18px;
-}
-
-.person__picture__img {
-  max-height: 600px;
-}
-
 .person {
   display: flex;
   padding: 40px;
@@ -14,6 +5,11 @@
 
 .person__card {
   padding: 0 40px 40px 40px;
+}
+
+.person__card__h1 {
+  font-size: 40px;
+  padding-bottom: 18px;
 }
 
 .person__card__bio__h2 {
@@ -31,8 +27,12 @@
 }
 
 .person__card__info__p {
-  padding: 20px 0;
+  padding: 20px 0px;
   display: flex;
   flex-direction: column;
   line-height: 25px;
+}
+
+.person__picture__img {
+  max-height: 600px;
 }

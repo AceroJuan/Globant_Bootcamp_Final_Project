@@ -5,13 +5,26 @@ import Cast from "../../components/Cast/Cast";
 
 describe("test <Navbar /> component", () => {
   test("render links", () => {
+    const data = {
+      character: "Natasha Romanoff / Black Widow",
+      credits_profile_path:
+        "https://image.tmdb.org/t/p/w300/6NsMbJXRlDZuDzatN2akFdGuTvx.jpg",
+      id: 1245,
+      name: "Scarlett Johansson",
+    };
+
     const history = createMemoryHistory();
     render(
       <Router history={history}>
-        <Cast />
+        <Cast
+          id={data.id}
+          name={data.name}
+          character={data.character}
+          credits_profile_path={data.credits_profile_path}
+        />
       </Router>
     );
 
-    expect(screen.getByTestId("cast")).toHaveTextContent("name"); // check the input's value is empty
+    expect(screen.getByTestId("cast")).toHaveTextContent("Scarlett Johansson"); // check the input's value is empty
   });
 });

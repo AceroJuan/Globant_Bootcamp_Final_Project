@@ -3,8 +3,8 @@ import { Router } from "react-router-dom";
 import { createMemoryHistory } from "history";
 import Movies from "../../components/views/Movies/Movies";
 
-describe("test <Navbar /> component", () => {
-  test("render links", () => {
+describe("test <Movies /> component", () => {
+  test("should render component ok", () => {
     const history = createMemoryHistory();
     render(
       <Router history={history}>

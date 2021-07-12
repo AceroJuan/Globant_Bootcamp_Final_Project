@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 import "./styles.css";
 
-const PeopleGridItem = ({ id, name = "name", profile_img, path }) => {
+const PeopleGridItem = ({ id, name, profile_img }) => {
   return (
     <div className="card transition">
       <Link className="card__a" to={`/person/${id}`}>
@@ -20,8 +20,14 @@ const PeopleGridItem = ({ id, name = "name", profile_img, path }) => {
   );
 };
 
-// PeopleGridItem.propTypes = {
+PeopleGridItem.defaultProps = {
+  name: "name",
+};
 
-// }
+PeopleGridItem.propTypes = {
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  profile_img: PropTypes.string.isRequired,
+};
 
 export default PeopleGridItem;

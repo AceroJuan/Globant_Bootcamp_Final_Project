@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useSearch } from "../../utils/context/useSearchContext";
-// import PropTypes from "prop-types";
 import useSearchData from "../../utils/hooks/useSearchData";
 import "./styles.css";
 
@@ -20,7 +19,11 @@ const Search = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (inputValue.length >= 2) {
-      setState([]);
+      setState({
+        movies: [],
+        tv: [],
+        people: [],
+      });
       setWord(inputValue);
       history.push("/search/movies");
     } else {
@@ -34,6 +37,7 @@ const Search = () => {
         search
       </label>
       <input
+        data-testid="searchBox"
         className="form__input"
         id="search_field"
         name="search_field"
@@ -44,7 +48,5 @@ const Search = () => {
     </form>
   );
 };
-
-// AddMovie.propTypes = {};
 
 export default Search;

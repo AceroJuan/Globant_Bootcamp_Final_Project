@@ -1,6 +1,6 @@
 .form {
   align-self: center;
-  width: 30%;
+  width: 300px;
 }
 
 .form__label {
@@ -11,5 +11,5 @@
 .form__input {
   font-size: 15px;
   padding: 6px;
-  width: 70%;
+  width: 230px;
 }
