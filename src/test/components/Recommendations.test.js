@@ -3,7 +3,7 @@ import { Router } from "react-router-dom";
 import { createMemoryHistory } from "history";
 import Recommendations from "../../components/Recommendations/Recommendations";
 
-describe("test <Recommendations /> component", () => {
+describe("test for <Recommendations /> component", () => {
   test("should render component ok", () => {
     const data = {
       id: 459151,
@@ -30,8 +30,7 @@ describe("test <Recommendations /> component", () => {
       </Router>
     );
 
-    expect(screen.getByTestId("recommendations").textContent).toBe(data.title); // check the input's value is empty
-    expect(screen.getByTestId("recommendations").textContent).toBe(data.name); // check the input's value is empty
+    expect(screen.getByTestId("recommendations").textContent).toBe(data.title);
   });
   test("should render component ok 2", () => {
     const data = {
@@ -59,6 +58,6 @@ describe("test <Recommendations /> component", () => {
       </Router>
     );
 
-    expect(screen.getByTestId("recommendations").textContent).toBe(data.name); // check the input's value is empty
+    expect(screen.getByTestId("recommendations").textContent).toBe(data.name);
   });
 });

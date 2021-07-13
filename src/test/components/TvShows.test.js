@@ -3,7 +3,7 @@ import { Router } from "react-router-dom";
 import { createMemoryHistory } from "history";
 import TvShows from "../../components/views/TvShows/TvShows";
 
-describe("test <TvShows /> component", () => {
+describe("test for <TvShows /> component", () => {
   test("should render component ok", () => {
     const history = createMemoryHistory();
     render(
@@ -12,6 +12,6 @@ describe("test <TvShows /> component", () => {
       </Router>
     );
 
-    expect(screen.getByTestId("tvshows")).toHaveTextContent("popular tv shows"); // check the input's value is empty
+    expect(screen.getByTestId("tvshows")).toHaveTextContent("popular tv shows");
   });
 });

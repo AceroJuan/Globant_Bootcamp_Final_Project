@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import getTvShowsData from "../helpers/getTvShowsData";
 
 const useTvShowsData = () => {
-  const [tvShow, setTvShow] = useState([]); // data movie tv Shows
+  const [tvShow, setTvShow] = useState([]);
 
   useEffect(() => {
     getTvShowsData().then((tvShow) => {

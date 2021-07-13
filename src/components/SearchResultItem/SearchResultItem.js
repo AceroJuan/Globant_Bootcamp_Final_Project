@@ -9,7 +9,7 @@ const SearchResultItem = ({ item, path }) => {
       <img
         data-testid="searchResultItemImg"
         className="li__img"
-        src={item.poster_img}
+        src={item.poster_img || item.profile_path}
         alt={`poster of ${item.title || item.name}`}
         title={item.title}
       />
@@ -24,9 +24,9 @@ const SearchResultItem = ({ item, path }) => {
           </Link>
         </h2>
         <p className="li__article__p" data-testid="searchResultItemP">{`${
-          item.release_date || item.first_air_date
+          item.release_date || item.first_air_date || item.known_for_department
         }`}</p>
-        <p className="li__article__p">{`${item.overview}`}</p>
+        <p className="li__article__p">{`${item.overview || item.gender}`}</p>
       </div>
     </div>
   );

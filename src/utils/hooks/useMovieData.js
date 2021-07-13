@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import getMovieData from "../helpers/getMovieData";
 
 const useMovieData = () => {
-  const [movieList, setMovieList] = useState([]); // data movie list
+  const [movieList, setMovieList] = useState([]);
 
   useEffect(() => {
     getMovieData().then((movie) => {
@@ -10,7 +10,7 @@ const useMovieData = () => {
     });
   }, []);
 
-  return movieList; // { data: [], loading: true }
+  return movieList;
 };
 
 export default useMovieData;

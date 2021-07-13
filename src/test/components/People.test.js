@@ -3,8 +3,8 @@ import { Router } from "react-router-dom";
 import { createMemoryHistory } from "history";
 import People from "../../components/views/People/People";
 
-describe("test <Navbar /> component", () => {
-  test("render links", () => {
+describe("test for <People /> component", () => {
+  test("should render component ok", () => {
     const history = createMemoryHistory();
     render(
       <Router history={history}>
@@ -12,6 +12,6 @@ describe("test <Navbar /> component", () => {
       </Router>
     );
 
-    expect(screen.getByTestId("people")).toHaveTextContent("people"); // check the input's value is empty
+    expect(screen.getByTestId("people")).toHaveTextContent("people");
   });
 });

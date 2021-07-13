@@ -3,7 +3,7 @@ import { Router } from "react-router-dom";
 import { createMemoryHistory } from "history";
 import PeopleGridItem from "../../components/PeopleGridItem/PeopleGridItem";
 
-describe("test <PeopleGridItem /> component", () => {
+describe("test for <PeopleGridItem /> component", () => {
   test("should render component ok", () => {
     const data = {
       id: 1245,
@@ -25,6 +25,6 @@ describe("test <PeopleGridItem /> component", () => {
 
     expect(screen.getByTestId("peopleGridItem")).toHaveTextContent(
       "Scarlett Johansson"
-    ); // check the input's value is empty
+    );
   });
 });

@@ -3,8 +3,8 @@ import { Router } from "react-router-dom";
 import { createMemoryHistory } from "history";
 import Preview from "../../components/Preview/Preview";
 
-describe("test <Preview /> component", () => {
-  test("should render the component <Preview />", () => {
+describe("test for <Preview /> component", () => {
+  test("should render the component ok", () => {
     const item = {
       id: 736073,
       overview:

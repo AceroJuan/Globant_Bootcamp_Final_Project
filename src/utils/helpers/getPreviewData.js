@@ -1,3 +1,9 @@
+/***
+ * API call to the movie database' to get one movie or tvshow,
+ * profile_img was created in that way because the API return a incomplete url
+ * so we need to interpolate the url with de variable to get the image
+ */
+
 import defaultImg2 from "../../assets/defaultImg2.jpg";
 
 const getPreviewData = async (id, path) => {

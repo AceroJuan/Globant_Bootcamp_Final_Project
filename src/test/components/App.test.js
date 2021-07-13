@@ -13,8 +13,6 @@ describe("test for <App /> component", () => {
         <App />
       </Router>
     );
-    // verify page content for expected route
-    // often you'd use a data-testid or role query, but this is also possible
     expect(
       screen.getByText(/find info about movies, tv shows/i)
     ).toBeInTheDocument();

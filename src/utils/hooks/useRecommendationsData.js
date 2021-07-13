@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import getRecommendationsData from "../helpers/getRecommendationsData";
 
 const useRecommendationsData = (id, path) => {
-  const [recommendation, setRecommendation] = useState([]); // data movie list
+  const [recommendation, setRecommendation] = useState([]);
 
   useEffect(() => {
     getRecommendationsData(id, path).then((recommendation) => {
@@ -10,7 +10,7 @@ const useRecommendationsData = (id, path) => {
     });
   }, [id, path]);
 
-  return recommendation; // { data: [], loading: true }
+  return recommendation;
 };
 
 export default useRecommendationsData;

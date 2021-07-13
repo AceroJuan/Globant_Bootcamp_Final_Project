@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import getCreditsData from "../helpers/getCreditsData";
 
 const useCreditsData = (id, path) => {
-  const [credits, setCredits] = useState([]); // data movie list
+  const [credits, setCredits] = useState([]);
 
   useEffect(() => {
     getCreditsData(id, path).then((credits) => {
@@ -10,7 +10,7 @@ const useCreditsData = (id, path) => {
     });
   }, [id, path]);
 
-  return credits; // { data: [], loading: true }
+  return credits;
 };
 
 export default useCreditsData;

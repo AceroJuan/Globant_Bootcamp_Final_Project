@@ -1,17 +1,17 @@
 import { createContext, useContext, useState } from "react";
 
 /***
- * inicializando el context 'searchContext'
+ * initializing context 'searchContext'
  */
 
 const searchContext = createContext("");
 
-// retorno del estado actual de context
+// return of the update context state
 export const useSearch = () => {
   return useContext(searchContext);
 };
 
-// manejo de logica del estado
+// state logical handle
 const useProvideSearch = () => {
   const [state, setState] = useState({
     movies: [],

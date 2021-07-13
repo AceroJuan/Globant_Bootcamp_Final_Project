@@ -1,7 +1,7 @@
 /***
- * llamada al API 'the movie database' para obtener listado de pelicuales tendencias,
- * poster_img se estructura de esa manera debido a que el API entrega el link de la imagen incompleta, es decir
- * se debe interpolar la variable a la url espeficicada en la documentacion de la API para formar el link de la imagen
+ * API call to the movie database' to get terending movies,
+ * Poster_img was created in that way because the API return a incomplete url
+ * so we need to interpolate the url with de variable to get the image
  */
 import defaultImg from "../../assets/defaultImg.jpg";
 

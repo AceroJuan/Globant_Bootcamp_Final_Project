@@ -1,3 +1,9 @@
+/***
+ * API call to the movie database' to get one person,
+ * profile_img was created in that way because the API return a incomplete url
+ * so we need to interpolate the url with de variable to get the image
+ */
+
 import defaultImg from "../../assets/defaultImg.jpg";
 const getPersonData = async (id) => {
   const url = `https://api.themoviedb.org/3/person/${id}?api_key=34041f61c196b07d1af8c759950a0672&language=en-US`;

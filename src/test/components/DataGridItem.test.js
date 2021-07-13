@@ -4,7 +4,7 @@ import { createMemoryHistory } from "history";
 import DataGridItem from "../../components/DataGridItem/DataGridItem";
 import defaultImg from "../../assets/defaultImg.jpg";
 
-describe("test <DataGridItem /> component", () => {
+describe("test for <DataGridItem /> component", () => {
   test("should render component ok", () => {
     const data = {
       id: 459151,
@@ -28,10 +28,10 @@ describe("test <DataGridItem /> component", () => {
 
     expect(screen.getByTestId("dataGridItem")).toHaveTextContent(
       "The Boss Baby: Family Business"
-    ); // check the input's value is empty
+    );
     expect(screen.getByTestId("dataGridItemImg").src).toBe(
       "https://image.tmdb.org/t/p/w300/gX5UrH1TLVVBwI7WxplW43BD6Z1.jpg"
-    ); // check the input's value is empty
+    );
   });
 
   test("should render component with broken image", () => {
@@ -56,6 +56,6 @@ describe("test <DataGridItem /> component", () => {
 
     expect(screen.getByTestId("dataGridItemImg").src).toBe(
       `http://localhost/${data.poster_img}`
-    ); // check the input's value is empty
+    );
   });
 });

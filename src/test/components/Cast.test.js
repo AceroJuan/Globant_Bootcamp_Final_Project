@@ -3,8 +3,8 @@ import { Router } from "react-router-dom";
 import { createMemoryHistory } from "history";
 import Cast from "../../components/Cast/Cast";
 
-describe("test <Navbar /> component", () => {
-  test("render links", () => {
+describe("test for <Cast /> component", () => {
+  test("should render component ok", () => {
     const data = {
       character: "Natasha Romanoff / Black Widow",
       credits_profile_path:
@@ -25,6 +25,6 @@ describe("test <Navbar /> component", () => {
       </Router>
     );
 
-    expect(screen.getByTestId("cast")).toHaveTextContent("Scarlett Johansson"); // check the input's value is empty
+    expect(screen.getByTestId("cast")).toHaveTextContent("Scarlett Johansson");
   });
 });

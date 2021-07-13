@@ -3,8 +3,8 @@ import { Router } from "react-router-dom";
 import { createMemoryHistory } from "history";
 import SearchResultItem from "../../components/SearchResultItem/SearchResultItem";
 
-describe("test <SearchResultItem /> component", () => {
-  test("cambiar", () => {
+describe("test for <SearchResultItem /> component", () => {
+  test("should render component ok", () => {
     const item = {
       id: 736073,
       overview:
@@ -27,16 +27,16 @@ describe("test <SearchResultItem /> component", () => {
 
     expect(screen.getByTestId("searchResultItemImg").src).toBe(
       "https://image.tmdb.org/t/p/w300/fvaB0jrzFXq07bUpox03k6qOAJu.jpg"
-    ); // check the input's value is empty
+    );
     expect(screen.getByTestId("searchResultItemA").href).toBe(
       "http://localhost/movie/preview/736073"
-    ); // check the input's value is empty
+    );
     expect(screen.getByTestId("searchResultItemA").textContent).toBe(
       "Batman: The Long Halloween, Part One"
-    ); // check the input's value is empty
+    );
   });
 
-  test("cambiar esto", () => {
+  test("should return the correct url & textContent", () => {
     const item = {
       id: 736073,
       overview:
@@ -58,12 +58,12 @@ describe("test <SearchResultItem /> component", () => {
 
     expect(screen.getByTestId("searchResultItemA").href).toBe(
       "http://localhost/movie/preview/736073"
-    ); // check the input's value is empty
+    );
     expect(screen.getByTestId("searchResultItemA").textContent).toBe(
       "Batman: The Long Halloween, Part One"
-    ); // check the input's value is empty
+    );
     expect(screen.getByTestId("searchResultItemP").textContent).toBe(
       "2021-06-21"
-    ); // check the input's value is empty
+    );
   });
 });

@@ -5,15 +5,15 @@ import Search from "../../components/Search/Search";
 import { ProvideSearch } from "../../utils/context/useSearchContext";
 window.alert = jest.fn();
 
-describe("test <Search /> component", () => {
-  test("should if search component exist", () => {
+describe("test for <Search /> component", () => {
+  test("should render component ok", () => {
     const history = createMemoryHistory();
     render(
       <Router history={history}>
         <Search />
       </Router>
     );
-    expect(screen.getByTestId("search")).toHaveTextContent("search"); // check the input's value is empty
+    expect(screen.getByTestId("search")).toHaveTextContent("search");
   });
 
   test("should find the word batman", () => {
